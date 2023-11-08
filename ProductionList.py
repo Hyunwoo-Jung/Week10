@@ -52,20 +52,20 @@ class ProductionList(PlanNode):
         # Problem 1. complete the remove last function of a doubly linked list
         # remove the node at the last of the linked list and return it
         node = self.nodeTail.getPrevNode()
-        if node.strSerialNumber != 'head':
-            nodesec = node.getPrevnode()
-            nodesec.setNextnode(self.nodeTail)
-            self.nodeTail.setPrevNode(nodesec)
+        if node.strSerialNumber != 'head': # when node is self.nodeHead
+            nodeSec = node.getPrevnode()
+            nodeSec.setNextnode(self.nodeTail)
+            self.nodeTail.setPrevNode(nodeSec)
         return node
 
     def removeFirst(self):
         #  Problem 1. complete the remove first function of a doubly linked list
         # remove the node at the first of the linked list and return it
         node = self.nodeHead.getNextNode()
-        if node.strSerialNumber != 'tail':
-            nodesec = node.getNextNode()
-            nodesec.setPrevNode(self.nodeHead)
-            self.nodeHead.setNextNode(nodesec)
+        if node.strSerialNumber != 'tail': # when node is self.nodeTail
+            nodeSec = node.getNextNode()
+            nodeSec.setPrevNode(self.nodeHead)
+            self.nodeHead.setNextNode(nodeSec)
         return node
 
     def getSize(self):

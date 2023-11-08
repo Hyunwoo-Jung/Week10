@@ -6,6 +6,7 @@ class Factory(ManufacturingProcess):
         self.waitingProduct = ProductionList(strFilename)
         self.completedProduct = ProductionList('')
 
+        # 생산 라인 개수
         row = 2
         col = 3
 
